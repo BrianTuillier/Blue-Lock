@@ -46,6 +46,7 @@ body {
 .link_ul {
     text-decoration: none;
     font-size: 18px;
+    color: black;
 }
 
 .link_ul:hover {
