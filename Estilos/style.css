@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(112, 70, 251);
+}
+
+/* Menu nav */
+.menu_ul {
+    margin: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Quitar menú al pasar a celular*/
+    transform: translateY(-100%);
+    transition: 0.3 ease;
+}
+
+.item {
+    /* 1em---> 16px */
+    /* Separamos el texto */
+    padding: 0.5em;
+}
+
+.tem:hover {
+    background-color: blue;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.link_ul {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link_ul:hover {
+    color: azure;
+}
+
+/* ICONOOOOOOO */
+.menu_icono {
+    width: 45px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Evitar desborde de imagen */
+img {
+    max-height: 100%;
+}
+
+/* Clase de js */
+.ven {
+    transform: translateY(0);
+}
+
+.carousel-inner img {
+    height: 90vh;
+    background-repeat: no-repeat;
+    /* Que la imagen no se repita */
+    background-size: cover;
+    /* tamaño grande sin estirar */
+    background-position: center center;
+    /* centrar epicamente */
+}
+
+.info .boton {
+    display: inline-block;
+    padding: 5px;
+    width: 350px;
+    border: 1px solid rgba(24, 16, 16, .7);
+    color: rgb(24, 16, 16);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1em;
+    margin-top: 24px;
+    margin-left: 5px;
+}
+
+.info .boton:hover {
+    border: 2px dotted black;
+}
+
+.contenedor_info {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.sobre_hp {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.titulo {
+    font-size: 24px;
+}
+
+/* GALERÍA */
+.galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap
+}
+
+.imagen {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.arriba {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 25vh 100vw 0 0;
+    border-color: rgb(112, 70, 251) transparent transparent transparent;
+}
+
+@media screen and (min-width: 768px) {
+    .menu_ul {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.5rem;
+        transform: translateY(0);
+    }
+
+    .menu_icono {
+        display: none;
+    }
+
+    .link_ul {
+        padding: 1em;
+    }
+}
